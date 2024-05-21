@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `estudiantes`
+--Estructura de tabla para la tabla `estudiantes`
 --
 
 CREATE TABLE `students` (
