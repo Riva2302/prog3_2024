@@ -7,7 +7,7 @@ class Database{
     private $clave="#Promo2024";
 
     //Conectar la base de datos
-    public function connectDB(){
+    public function __construct(){
         $this->conexion=new mysqli($this->servidor, $this->usuario, $this->clave, $this->nombre);
         if($this->conexion->connect_error){
             print "Fallo la conexion.".$this->conexion->connect_error;

@@ -29,6 +29,8 @@ class Student{
         $this->school=$school;
     }
 
+
+
     public function addStudent(){
         //crear la consulta
         $sql="INSERT INTO students (dni, surname, name, birthdate, phone, address, email, user, password, school) VALUES (".$this->dni.", '".$this->surname."', '".$this->name."', '".$this->birthdate."', '".$this->phone."', '".$this->address."', '".$this->password."', '".$this->school."')";
@@ -38,13 +40,40 @@ class Student{
         return $result;
     }
     public function editStudent(){
-
+        $sql="UPDATE student SET dni=".$this->dni." surname='".$this->surname."' name='".$this->name."' birthdate='".$this->birthdate."' phone='".$this->phone."' address='".$this->address."' email='".$this->email."' user='".$this->user."' password='".$this->password."' school='".$this->school."' WHERE idStudent=".$this->idStudent;
+        $this->conexion=new Database();
+        $this->conexion-query($sql);
+        $this->conexion->close();
+        return $result;
     }
     public function deleteStudent(){
+        $sql="DELETE FROM students WHERE idStudent=".$this->idStudent."";
+        $this->conexion=new Database();
+        $this->conexion-query($sql);
+        $this->conexion->close();
+        return $result;
 
     }
     public function getStudent(){
-        
+        $sql="SELECT * FROM students WHERE idStudent=".$this->idStudent." ";
+        $this->conexion=new Database();
+        $this->conexion-query($sql);
+        $this->conexion->close();
+        return $result;
+        if ($result){
+            if($row=$result->fetch_assoc()){
+                $this->dni=$row("dni");
+                $this->name=$row("name");
+                $this->surname=$row("surname");
+                $this->birthdate=$row("birthdate");
+                $this->phone=$row("phone");
+                $this->address=$row("address");
+                $this->email=$row("email");
+                $this->password=$row("password");
+                $this->school=$row("school");
+            return true;
+            }
+        }
     }
     public function getAllStudents(){
         
