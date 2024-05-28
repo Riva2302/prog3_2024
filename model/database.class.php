@@ -1,10 +1,10 @@
 <?php
 class Database{
     private $conexion=null;
-    private $nombre="db_school";
+    private $nombre="estudiantes";
     private $servidor="localhost";
     private $usuario="root";
-    private $clave="#Promo2024";
+    private $clave="";
 
     //Conectar la base de datos
     public function __construct(){

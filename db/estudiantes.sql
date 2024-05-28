@@ -4,7 +4,7 @@
 --
 -- Servidor: 127.0.0.1
 -- Tiempo de generaci�n: 21-05-2024 a las 04:22:25
--- Versi�n del servidor: 10.1.25-MariaDB
+-- Versi�n del servidor: localhost
 -- Versi�n de PHP: 5.6.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -13,20 +13,6 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Base de datos: `db_school`
---
-
--- --------------------------------------------------------
-
---
---Estructura de tabla para la tabla `estudiantes`
---
 
 CREATE TABLE `students` (
   `idStudent` int(100) NOT NULL,
@@ -45,12 +31,12 @@ CREATE TABLE `students` (
 -- Volcado de datos para la tabla `estudiantes`
 --
 
-INSERT INTO `estudiantes` (`idStudent`, `dni`, `surname`, `name`, `birthdate`, `phone`, `address`, `email`, `password`, `school`) VALUES
-(1, 44341300, 'ACU�A ', 'CARO ANDR�S NICOL�S', '2002-12-05', '', '', '', 44341300, '44341300', 'Epet Nro3'),
-(2, 44342301, 'BAIGORRIA ', 'ARIANA AILIN ', '2003-02-03', '', '', '', 44342301, '44342301', 'Epet Nro3'),
-(3, 44341303, 'BENEITE BIRNE', 'KAREN ELISABET ', '2002-10-17', '', '', '', 44341303, '44341303', 'Epet Nro3'),
-(4, 44120304, 'BONINO ', 'ENZO  ', '2002-10-23', '', '', '', 44120304, '44120304', 'Epet Nro3'),
-(5, 44680305, 'BUFFAGNE ', 'TERESITA ANTONELA ', '2002-03-20', '', '', '', 44680305, '44680305', 'Epet Nro3');
+INSERT INTO `students` (`idStudent`, `dni`, `surname`, `name`, `birthdate`, `phone`, `address`, `email`, `password`, `school`) VALUES
+(1, 44341300, 'ACU�A ', 'CARO ANDR�S NICOL�S', '2002-12-05', '', '', '', '44341300', 'Epet Nro3'),
+(2, 44342301, 'BAIGORRIA ', 'ARIANA AILIN ', '2003-02-03', '', '', '', '44342301', 'Epet Nro3'),
+(3, 44341303, 'BENEITE BIRNE', 'KAREN ELISABET ', '2002-10-17', '', '', '', '44341303', 'Epet Nro3'),
+(4, 44120304, 'BONINO ', 'ENZO  ', '2002-10-23', '', '', '', '44120304', 'Epet Nro3'),
+(5, 44680305, 'BUFFAGNE ', 'TERESITA ANTONELA ', '2002-03-20', '', '', '', '44680305', 'Epet Nro3');
 
 --
 -- �ndices para tablas volcadas
