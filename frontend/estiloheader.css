@@ -1,0 +1,26 @@
+.header{
+    background-color: rgb(40, 211, 253);
+    text-align: left;
+    height:100px;
+    margin-top:-25px;
+    padding-top:25px;
+    width: 100%;
+}
+
+.nav_bar{
+    background-color:rgb(122, 199, 243);
+    text-align: center;
+    margin-top:-25px;
+    display:flex;
+    width: 100%;
+}
+
+body{
+    margin:0;
+}
+.c1{
+    flex-direction: column;
+    margin-right: 100px;
+    margin-left:100px;
+    
+}
