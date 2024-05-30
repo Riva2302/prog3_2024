@@ -1,0 +1,11 @@
+body{
+    margin: 0;
+}
+.nav_container{
+    height: 100px;
+    width: 100%;
+    background-color: blue;
+}
+.img_introduccion{
+    height: 300px;
+}
