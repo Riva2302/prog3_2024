@@ -1,0 +1,23 @@
+footer {
+    width: 100%;
+    height: 150px; /* 100 píxeles de alto */
+    background-color: #1142ca; /* Color de fondo del footer */
+    color: #fff; /* Color del texto */
+    position: fixed; /* Fija el footer en la parte inferior de la ventana del navegador */
+    bottom: 0; /* Coloca el footer en la parte inferior */
+    left: 0; /* Alinea el footer a la izquierda */
+    padding: 20px; /* Espacio interno alrededor del contenido del footer */
+    box-sizing: border-box; /* Incluye el padding en el ancho y alto total del footer */
+  
+}
+.links{
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+
+.links a {
+    color: #fff; /* Color del enlace */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    margin-left: 10px; /* Espacio entre los enlaces */
+}
