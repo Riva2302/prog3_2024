@@ -1,0 +1,292 @@
+body{
+    margin: 0;
+    background-color: #D3D3D3;
+}
+.nav_container{
+    height: 100px;
+    width: 100%;
+    background-color: blue;
+}
+.img_introduccion{
+    height: 300px;
+    margin: 30px;
+}
+.container_introduccion{
+    display: flex;
+    width: 100%;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.texto_introduccion{
+    flex-direction: column;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+.icon_ab{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -15px;
+}
+.icon_abajo{
+    height: 30px;
+}
+.container_post_introduccion{
+    display: flex;
+}
+.h2_destacado{
+    text-align:center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.carousel_container{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+}
+.carousel_slide{
+    display: none;
+    position: relative;
+    margin-left: 50px;
+    
+}
+.carousel_container button{
+    margin-left: 50px;
+}
+
+.img_carousel{
+    height: 450px;
+    width: 65%;
+    border-radius: 40px;
+    object-fit: cover;
+    display: block;
+}
+.text{
+    width: 65%;
+    background-color: white;
+    position: absolute;
+    height: 150px;
+    bottom: 0%;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    text-align: left;
+}
+.text h3{
+    text-align: center;
+}
+.text p{
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: -10px;
+}
+
+.left{
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent;
+    border: none;
+    font-size: 40px;
+}
+.right{
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent;
+    border: none;
+    font-size: 40px;
+}
+
+.carousel_indicators {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    align-items: end;
+    position: relative;
+    top: -600px;
+    
+}
+
+.indicator {
+    height: 25px;
+    width: 25px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.indicator.active {
+    background-color: #717171;
+}
+.botones_container{
+    width: 66%;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: -350px;
+}
+.cards_container{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+.card_item{
+    height: 120px;
+    width: 93%;
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 20px;
+    position: relative;
+    left: 50px;
+    border: 2px solid black ;
+    display: flex;
+    align-items: center;
+}
+.img_card{
+    height: 60px;
+    margin-left: 20px;
+}
+.h3_card{
+    margin-left: 20px;
+}
+.mas_card{
+    height: 20px;
+    width: 130px;
+    background-color: #1916C8;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    margin-right: 20px;
+}
+footer{
+    height: 300px;
+    width: 100%;
+    background-color: blue;
+}
+
+@media (max-width:1100px){
+    .card_item{
+        width: 91%;
+    }
+}
+
+@media (max-width:850px){
+    .card_item{
+        width: 89%;
+    }
+}
+
+@media (max-width:700px){
+    .card_item{
+        width: 85%;
+    }
+}
+
+@media (max-width:650px){
+    .img_introduccion{
+        display: none;
+    }
+    .texto_introduccion{
+        margin-left: 20px;
+    }
+}
+
+@media (max-width:560px){
+    .card_item{
+        width: 81%;
+    }
+    .carousel_slide{
+        display: none;
+        position: relative;
+        margin-left: 20px;
+        
+    }
+
+}
+@media (max-width:540px){
+.text{
+    height: 200px;
+}
+.card_item{
+    height:150px ;
+}
+}
+
+@media (max-width:400px){
+    .text{
+        height: 250px;
+    }
+    .h3_card{
+        margin-right:20px ;
+    }
+    }
+    @media (max-width:300px){
+        .text{
+            height: 300px;
+        }
+        .botones_container{
+            height: 20px;
+            width: 100%;
+        }
+        .card_item{
+            height: 170px;
+        }
+        }
+
+@media (max-width:270px){
+.text{
+    height: 320px;
+}
+}
+@media (max-width:250px){
+    .carousel_container{
+        display: none;
+    }
+    .container_introduccion{
+        height: 500px;
+    }
+}
+
+@media (max-width:780px){
+    .carousel_indicators{
+        display: none;
+    }
+    .indicator{
+        display: none;
+    }
+    .img_carousel{
+        width: 95%;
+    }
+    .text{
+        width: 95%;
+    }
+
+    .carousel_slide{
+        display: none;
+        position: relative;
+        margin-left: 20px;
+        
+    }
+    .botones_container{
+        top:-380px;
+        width: 96%;
+        left: -20px;
+    }
+    .card_item{
+        left: 20px;
+        width: 92%;
+    }
+
+}
