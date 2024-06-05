@@ -4,34 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header</title>
-    <link rel="stylesheet" href="estiloheader.css" type="text/css">
+    <link rel="stylesheet" href="css/estiloheader.css" type="text/css">
 
 </head>
 <body>
     <header class="header">
-        <h1>EPET 3</h1> 
-    </header>
-    <nav class="nav_bar"> 
-        <div class="c1">
-            <img src="" alt=""><a href="">Incio</a>
-            <img src="" alt=""><a href="">Historia</a>
-        </div>
+        <h1>EPET 3</h1>
+        <nav class="nav_container"> 
+            <img src="icons/menu-hamburguesa.png" class="menu_icon" id="abrir" alt="" class="menu-icon">
+            <div class="menu-container" id="menu-container">
+                <div id="cerrar" class="menu-cerrar"><img src="icons/cerrar.png" alt="" class="menu-cerrar-icon"></div>
+                        <div class="menu-item-container">
+                            <div class="c1">
+                                <img src="icons/home.png" alt="" class="icons"><a href="front_index/index.html" class="menu-item">Incio</a>
+                            </div>
 
-        <div class="c1"> 
-            <img src="" alt=""><a href="">Estudiante/tutor</a>
-            <img src="" alt=""><a href="">Ayuda</a>
-        </div>
+                            <div class="c1">    
+                                <img src="icons/colegio.png" alt="" class="icons"><a href="" class="menu-item">Historia</a>
+                            </div>
 
-        <div class="c1">
-            <img src="" alt=""><a href="">Noticias</a>
-            <img src="" alt=""><a href="">Gestión Docente</a>
-        </div>
+                            <div class="c1"> 
+                                <img src="icons/gorro-de-graduacion.png" alt="" class="icons"><a href="estudiante.html" class="menu-item">Estudiante/tutor</a>
+                            </div>
 
-        <div class="c1">
-            <img src="" alt=""><a href="">Planificaciones</a>
-            <img src="" alt=""><a href="">Estructura Curricular</a>
-        </div>
+                            <div class="c1">    
+                                <img src="icons/ayuda.png" alt="" class="icons"><a href="ayuda.html" class="menu-item">Ayuda</a>
+                            </div>
 
+                            <div class="c1">
+                                <img src="icons/mundo.png" alt="" class="icons"><a href="noticias.html" class="menu-item">Noticias</a>
+                            </div>
+
+                            <div class="c1">
+                                <img src="icons/usuario.png" alt="" class="icons"><a href="gestiondocente.html" class="menu-item">Gestión Docente</a>
+                            </div>
+
+                            <div class="c1">
+                                <img src="icons/libro.png" alt="" class="icons"><a href="planificaciones.html" class="menu-item">Planificaciones</a>
+                            </div>
+
+                            <div class="c1">
+                                <img src="icons/curricular.png" alt="" class="icons"><a href="estructuracurricular.html" class="menu-item">Estructura Curricular</a>
+                            </div>
+                    </div>
+            </div>
     </nav>
+</header>
+<script src="js/headerscript.js"></script>
 </body>
 </html>
