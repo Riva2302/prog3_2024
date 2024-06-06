@@ -8,7 +8,7 @@
 <body>
     <form action="controller/student.controller.php" method="POST" name="formAddStudent">
         <input type="hidden" name="operation" value="add">
-        
+    
         <label for="">DNI:</label><input type="text" name="dni"><br>
         <label for="">Nombre:</label><input type="text" name="name"><br>
         <label for="">Apellido:</label><input type="text" name="surname"><br>
