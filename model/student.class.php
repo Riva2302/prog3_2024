@@ -16,18 +16,18 @@ class Student{
     private $school=null;
     private $conexion=null;
 
-    public function __construct($dni, $surname, $name, $birthdate, $phone, $address, $email, $user, $password, $school, $conexion){
-        $this->dni=$dni;
-        $this->surname=$surname;
-        $this->name=$name;
-        $this->birthday=$birthdate;
-        $this->phone=$phone;
-        $this->address=$address;
-        $this->email=$email;
-        $this->user=$user;
-        $this->password=$password;
-        $this->school=$school;
-    }
+    //public function __construct($dni, $surname, $name, $birthdate, $phone, $address, $email, $user, $password, $school, $conexion){
+       // $this->dni=$dni;
+        //$this->surname=$surname;
+        //$this->name=$name;
+        //$this->birthday=$birthdate;
+        //$this->phone=$phone;
+        //$this->address=$address;
+        //$this->email=$email;
+        //$this->user=$user;
+        //$this->password=$password;
+        //$this->school=$school;
+    //}
 
 
 
@@ -35,12 +35,12 @@ class Student{
         //crear la consulta
         $sql="INSERT INTO students (dni, surname, name, birthdate, phone, address, email, user, password, school) VALUES (".$this->dni.", '".$this->surname."', '".$this->name."', '".$this->birthdate."', '".$this->phone."', '".$this->address."', '".$this->password."', '".$this->school."')";
         $this->conexion=new Database();
-        $this->conexion-query($sql);
+        $this->conexion->query($sql);
         $this->conexion->close();
         return $result;
     }
     public function editStudent(){
-        $sql="UPDATE student SET dni=".$this->dni." surname='".$this->surname."' name='".$this->name."' birthdate='".$this->birthdate."' phone='".$this->phone."' address='".$this->address."' email='".$this->email."' user='".$this->user."' password='".$this->password."' school='".$this->school."' WHERE idStudent=".$this->idStudent;
+        $sql="UPDATE student SET dni=".$this->dni." 'surname=".$this->surname."' name='".$this->name."' birthdate='".$this->birthdate."' phone='".$this->phone."' address='".$this->address."' email='".$this->email."' password='".$this->password."' school='".$this->school."' WHERE idStudent=".$this->idStudent;
         $this->conexion=new Database();
         $this->conexion-query($sql);
         $this->conexion->close();
