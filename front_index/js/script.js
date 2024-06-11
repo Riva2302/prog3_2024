@@ -31,3 +31,24 @@ iterarSlide(indice_slide);
 
 // Cambiar de diapositiva automáticamente cada 10 segundos
 setInterval(rightSlide, 10000);
+
+
+
+// Funciones de la barra de navegacion
+document.addEventListener("DOMContentLoaded", function() {
+    var abrirIcon = document.getElementById("abrir");
+    var cerrarIcon = document.getElementById("cerrar");
+    var menuContainer = document.getElementById("menu-item-container");
+
+    abrirIcon.addEventListener("click", function() {
+        menuContainer.style.display="block";
+        abrirIcon.style.display = "none";
+        cerrarIcon.style.display = "block";
+    });
+
+    cerrarIcon.addEventListener("click", function() {
+        menuContainer.style.display="none";
+        abrirIcon.style.display = "block";
+        cerrarIcon.style.display = "none";
+    });
+});

@@ -1,12 +1,15 @@
 body{
     margin: 0;
     background-color: #D3D3D3;
+    
+    padding: 0;
 }
-.nav_container{
-    height: 100px;
-    width: 100%;
-    background-color: blue;
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 .img_introduccion{
     height: 300px;
     margin: 30px;
@@ -360,5 +363,106 @@ footer{
 @media (max-width:240px){
     .text_footer{
         width: 120px;
+    }
+}
+
+
+/* ¡¡¡Estilo de la barra de navegacion!!! */
+.header{
+    background-color: #3074FA;
+    text-align: left;
+    height:100px;
+    position: relative;
+    top: 0;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.nav_bar{
+    background-color: #9A9A9A;
+    text-align: center;
+    margin-top:-25px;
+    display:flex;
+    width: 100%;
+    position:relative;
+    padding-bottom:50px;
+}
+
+.menu_icon{
+    width: 30px;
+    height:30px;
+    position: relative;
+    top: 2px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.menu-cerrar-icon{
+    width:25px; 
+    height:25px;
+    position: relative;
+    top: 5px;
+    z-index: 1;
+    cursor: pointer;
+    display: none;
+}
+
+.c1{
+    display: flex;
+    
+    margin-right: 100px;
+    margin-bottom:10px;
+    margin-left: 20px;
+    text-decoration-line: none;
+    width: 250px;
+    
+    
+}
+.c1 a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding-right: 12px;
+}
+a span{
+    position: relative;
+    top: -10px;
+    left: 10px;
+    font-family: Inter Tight;
+}
+
+.menu-container{
+        width: 100%;
+        position:absolute;
+        bottom: 0;
+        top: 0;
+}
+.menu-item-container{
+    width: 100%;
+    background-color: #9a9a9ae0;
+    flex-direction: column;
+    margin-top: 100px;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    display: none;
+}
+
+.icons{
+    width: 40px;
+    height:40px;
+}
+
+.iconos_menu_container{
+    display: flex;
+    padding-left: 20px;
+    padding-top: 30px;
+    
+    
+}
+@media (max-width:320px) {
+    .icons{
+        height: 30px;
+        width: 30px;
     }
 }
