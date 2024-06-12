@@ -1,5 +1,4 @@
 <?php
-// HOL
 include("database.class.php");
 
 class Student{
