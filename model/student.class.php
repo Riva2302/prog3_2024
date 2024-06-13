@@ -56,9 +56,9 @@ class Student{
     public function getStudent(){
         $sql="SELECT * FROM students WHERE idStudent=".$this->idStudent." ";
         $this->conexion=new Database();
-        $this->conexion-query($sql);
-        $this->conexion->close();
-        return $result;
+        $this->conexion->query($sql);
+        // $this->conexion->close();
+        $result=$this->conexion->query($sql);
         if ($result){
             if($row=$result->fetch_assoc()){
                 $this->dni=$row["dni"];
@@ -75,7 +75,16 @@ class Student{
         }
     }
     public function getAllStudents(){
-        
+        $sql="SELECT * FROM students";
+        $this->conexion=new Database();
+        $result=$this->conexion->query($sql);
+        $allStudents=null;
+        if ($result){
+            while($row=$result->fetch_assoc()){
+                $allStudents[]=$row;
+            }
+        }
+        return $allStudents;
     }
 
     // geeter y setter
