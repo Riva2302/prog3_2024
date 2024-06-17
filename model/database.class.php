@@ -1,7 +1,7 @@
 <?php
 class Database{
     private $conexion=null;
-    private $nombre="estudiantes";
+    private $nombre="db_school";
     private $servidor="localhost";
     private $usuario="root";
     private $clave="";
@@ -21,7 +21,5 @@ class Database{
     public function closeDB(){
         return $this->close();
     }
-
-    // HOLA
 }
 ?>

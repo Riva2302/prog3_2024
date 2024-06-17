@@ -6,80 +6,84 @@ class Student{
     private $dni=null;
     private $surname=null;
     private $name=null;
-    private $birthdate=null;
+    private $birthday=null;
     private $phone=null;
     private $address=null;
     private $email=null;
     private $user=null;
     private $password=null;
+    private $student=null;
     private $school=null;
     private $conexion=null;
 
-    //public function __construct($dni, $surname, $name, $birthdate, $phone, $address, $email, $user, $password, $school, $conexion){
-       // $this->dni=$dni;
-        //$this->surname=$surname;
-        //$this->name=$name;
-        //$this->birthday=$birthdate;
-        //$this->phone=$phone;
-        //$this->address=$address;
-        //$this->email=$email;
-        //$this->user=$user;
-        //$this->password=$password;
-        //$this->school=$school;
-    //}
-
-
+    // public function __construct($dni, $surname, $name, $birthday, $phone, $address,$email, $password, $school){
+    //     $this->dni=$dni;
+    //     $this->surname=$surname;
+    //     $this->name=$name;
+    //     $this->birthday=$birthaday;
+    //     $this->phone=$phone;
+    //     $this->address=$address;
+    //     $this->email=$email;
+    //     $this->password=$password;
+    //     $this->school=$school;
+    // }
 
     public function addStudent(){
-        //crear la consulta
-        $sql="INSERT INTO students (dni, surname, name, birthdate, phone, address, email, user, password, school) VALUES (".$this->dni.", '".$this->surname."', '".$this->name."', '".$this->birthdate."', '".$this->phone."', '".$this->address."', '".$this->password."', '".$this->school."')";
+        //crear consulta
+        $sql="INSERT INTO students (dni, surname, name, birthday, phone, address, email, password, school) VALUES (".$this->dni.", '".$this->surname."', '".$this->name."', '".$this->birthday."', '".$this->phone."', '".$this->address."', '".$this->email."', '".$this->password."', '".$this->school."')";
+        
         $this->conexion=new Database();
-        $this->conexion->query($sql);
-        $this->conexion->close();
+        $result= $this->conexion->query($sql);
+        //$this->conexion->close();
         return $result;
     }
-    public function editStudent(){
-        $sql="UPDATE student SET dni=".$this->dni." 'surname=".$this->surname."' name='".$this->name."' birthdate='".$this->birthdate."' phone='".$this->phone."' address='".$this->address."' email='".$this->email."' password='".$this->password."' school='".$this->school."' WHERE idStudent=".$this->idStudent;
+
+    public function updateStudent(){
+        $sql="UPDATE students SET dni=".$this->dni.", surname='".$this->surname."', name='".$this->name."', birthday='".$this->birthday."', phone='".$this->phone."', address='".$this->address."', email='".$this->email."', password='".$this->password."', school='".$this->school."' WHERE idStudent=".$this->idStudent;
+        print $sql;
         $this->conexion=new Database();
-        $this->conexion-query($sql);
-        $this->conexion->close();
-        return $result;
-    }
-    public function deleteStudent(){
-        $sql="DELETE FROM students WHERE idStudent=".$this->idStudent."";
-        $this->conexion=new Database();
-        $this->conexion-query($sql);
-        $this->conexion->close();
+        $result= $this->conexion->query($sql);
+        //$this->conexion->close();
         return $result;
 
     }
+
+    public function deleteStudent(){
+        $sql="DELETE FROM students WHERE idStudent=".$this->idStudent." ";
+        $this->conexion=new Database();
+        $result= $this->conexion->query($sql);
+      //  $this->conexion->close();
+        return $result;
+    }
+
     public function getStudent(){
         $sql="SELECT * FROM students WHERE idStudent=".$this->idStudent." ";
         $this->conexion=new Database();
-        $this->conexion->query($sql);
-        // $this->conexion->close();
-        $result=$this->conexion->query($sql);
-        if ($result){
+        $result= $this->conexion->query($sql);
+        //$this->conexion->close();
+        if($result){
             if($row=$result->fetch_assoc()){
                 $this->dni=$row["dni"];
-                $this->name=$row["name"];
                 $this->surname=$row["surname"];
-                $this->birthdate=$row["birthdate"];
+                $this->name=$row["name"];
+                $this->birthday=$row["birthday"];
                 $this->phone=$row["phone"];
                 $this->address=$row["address"];
                 $this->email=$row["email"];
                 $this->password=$row["password"];
                 $this->school=$row["school"];
-            return true;
             }
         }
     }
+
     public function getAllStudents(){
         $sql="SELECT * FROM students";
+
         $this->conexion=new Database();
-        $result=$this->conexion->query($sql);
+        $result= $this->conexion->query($sql);
+
         $allStudents=null;
-        if ($result){
+        if($result){
             while($row=$result->fetch_assoc()){
                 $allStudents[]=$row;
             }
@@ -87,52 +91,55 @@ class Student{
         return $allStudents;
     }
 
-    // geeter y setter
+
+
+
+    //Getter y Setter
     public function getIdStudent(){
         return $this->idStudent;
     }
+
     public function setIdStudent($idStudent){
         $this->idStudent=$idStudent;
-    }
-
+    } 
+    //repetir lo mismo en todas las variables 
     public function getDni(){
         return $this->dni;
     }
 
     public function setDni($dni){
-        return $this->dni=$dni;
+        $this->dni=$dni;
+    } 
+    public function getSurname(){
+        return $this->surname;
     }
+
+    public function setSurname($surname){
+        $this->surname=$surname;
+    } 
 
     public function getName(){
         return $this->name;
     }
 
     public function setName($name){
-        return $this->name=$name;
+        $this->name=$name;
+    } 
+  
+    public function getBirthday(){
+        return $this->birthday;
     }
 
-    public function getSurname(){
-        return $this->surname;
-    }
+    public function setBirthday($birthday){
+        $this->birthday=$birthday;
+    }  
 
-    public function setSurname($surname){
-        return $this->surname=$surname;
-    }
-
-    public function getBirthdate(){
-        return $this->birthdate;
-    }
-
-    public function setBirthdate($birthdate){
-        return $this->birthdate=$birthdate;
-    }
-
-    public function getPhone(){
+      public function getPhone(){
         return $this->phone;
     }
 
     public function setPhone($phone){
-        return $this->phone=$phone;
+        $this->phone=$phone;
     }
 
     public function getAddress(){
@@ -140,7 +147,7 @@ class Student{
     }
 
     public function setAddress($address){
-        return $this->address=$address;
+        $this->address=$address;
     }
 
     public function getEmail(){
@@ -148,7 +155,7 @@ class Student{
     }
 
     public function setEmail($email){
-        return $this->email=$email;
+        $this->email=$email;
     }
 
     public function getPassword(){
@@ -156,16 +163,14 @@ class Student{
     }
 
     public function setPassword($password){
-        return $this->password=$password;
+        $this->password=$password;
     }
-    
+
     public function getSchool(){
         return $this->school;
     }
 
     public function setSchool($school){
-        return $this->school=$school;
+        $this->school=$school;
     }
 }
-
-?>
