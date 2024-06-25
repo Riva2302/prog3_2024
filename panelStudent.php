@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylsheet" href="css/alertify.css">
+    <link rel="stylsheet" href="css/themes/default.css">
+
 </head>
 <body>
     <h1>Panel de estudiantes</h1>
@@ -34,7 +37,7 @@
                     print"<td>".$data["birthday"]."</td>";
                     print"<td>".$data["phone"]."</td>";
                     print "<td><input type='button' name='editar' value='Editar' onclick=\"location.href='formEditStudent.php?idStudent=".$data["idStudent"]."';\" /></td>";
-                    //print"<td><input type='button' name='eliminar' value='Eliminar'/></td>";
+                    print"<td><input type='button' name='eliminar' value='Eliminar'/ onclick=''></td>";
                     print"</tr>";
                 }
             }else{
@@ -45,4 +48,8 @@
     </table>
     
 </body>
+<script src="js/alertify.js"></script>
+<script src="js/alertify.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
 </html>

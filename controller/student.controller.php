@@ -18,7 +18,6 @@ if($operacion=="add"){
     $student->setSchool($_REQUEST ["school"]);
     $student->addStudent();
 }else if($operacion=="update"){
-   
     $student->setDni($_REQUEST ["dni"]);
     $student->setName($_REQUEST ["name"]);
     $student->setSurname($_REQUEST ["surname"]);
@@ -32,6 +31,8 @@ if($operacion=="add"){
     $student->updateStudent();
 
 }else if($operacion=="delete"){
-
+    
+    $student->setIdStudent($_REQUEST ["idStudent"]);
+    $student-> deleteStudent();
 }
 ?>
