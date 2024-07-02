@@ -6,11 +6,12 @@ function askDeleteStudent(id){
 function deleteStudent(id){
     $.ajax({
         type:"POST",
-        url:"student.controller.php",
-        data:"operation=delete&id="+id,
+        url:"../controller/student.controller.php",
+        data:"id="+id+"operation=delete&id=",
         success:function(result){
             if(result==1){
                 alertify.success("El proceso se ejecuto correctamente");
+                location.reload();
             }else{
                 alertify.error("El proceso no pudo realizarse");
             }

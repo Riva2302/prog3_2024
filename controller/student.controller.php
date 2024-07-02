@@ -1,6 +1,6 @@
 <?php
 
-include("../Model/student.class.php");
+include("../model/student.class.php");
 $operacion=$_REQUEST["operation"];
 $student= new Student(); //creamos el objeto student de tipo Student
 
@@ -32,7 +32,8 @@ if($operacion=="add"){
 
 }else if($operacion=="delete"){
     
-    $student->setIdStudent($_REQUEST ["idStudent"]);
-    $student-> deleteStudent();
+    $student->setIdStudent($_REQUEST ["id"]);
+    $result=$student-> deleteStudent();
+    echo $result;
 }
 ?>

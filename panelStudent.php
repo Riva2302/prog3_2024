@@ -37,7 +37,7 @@
                     print"<td>".$data["birthday"]."</td>";
                     print"<td>".$data["phone"]."</td>";
                     print "<td><input type='button' name='editar' value='Editar' onclick=\"location.href='formEditStudent.php?idStudent=".$data["idStudent"]."';\" /></td>";
-                    print"<td><input type='button' name='eliminar' value='Eliminar'/ onclick=''></td>";
+                    print"<td><input type='button' name='eliminar' value='Eliminar'/ onclick='askDeleteStudent(".$data["idStudent"].")'></td>";
                     print"</tr>";
                 }
             }else{
@@ -49,7 +49,8 @@
     
 </body>
 <script src="js/alertify.js"></script>
-<script src="js/alertify.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<scrip src="js/alertify.min.js"></script>
+<script src="js/funciones.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></scrip>
 
 </html>
