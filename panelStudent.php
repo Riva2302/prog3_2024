@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylsheet" href="css/alertify.css">
-    <link rel="stylsheet" href="css/themes/default.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/alertify.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/themes/default.min.css"/>
 
 </head>
 <body>
@@ -24,7 +24,7 @@
         </thead>
         <tbody>
             <?php
-            include("model/student.class.php");
+            include("./model/student.class.php");
             $student= new Student();
             $allStudents=$student->getAllStudents();
             if($allStudents){
@@ -37,7 +37,7 @@
                     print"<td>".$data["birthday"]."</td>";
                     print"<td>".$data["phone"]."</td>";
                     print "<td><input type='button' name='editar' value='Editar' onclick=\"location.href='formEditStudent.php?idStudent=".$data["idStudent"]."';\" /></td>";
-                    print"<td><input type='button' name='eliminar' value='Eliminar'/ onclick='askDeleteStudent(".$data["idStudent"].")'></td>";
+                    print "<td><input type='button' name='eliminar' value='Eliminar' onclick='askDeleteStudent(".$data['idStudent'].");'/></td>";
                     print"</tr>";
                 }
             }else{
@@ -46,11 +46,14 @@
             ?>
         </tbody>
     </table>
-    
+
 </body>
-<script src="js/alertify.js"></script>
-<scrip src="js/alertify.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.6.4.js"
+  integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+  crossorigin="anonymous"></script>
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/alertify.min.js"></script>
 <script src="js/funciones.js"></script>
-<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></scrip>
+
 
 </html>

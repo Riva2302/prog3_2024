@@ -31,7 +31,6 @@ if($operacion=="add"){
     $student->updateStudent();
 
 }else if($operacion=="delete"){
-    
     $student->setIdStudent($_REQUEST ["id"]);
     $result=$student-> deleteStudent();
     echo $result;
