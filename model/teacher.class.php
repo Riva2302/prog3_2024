@@ -29,8 +29,8 @@ class Teacher{
         $result= $this->conexion->query($sql);
         //$this->conexion->close();
         return $result;
-
     }
+    
     public function deleteTeacher(){
         $sql="DELETE FROM teachers WHERE idTeacher=".$this->idTeacher." ";
         $this->conexion=new Database();
@@ -39,8 +39,5 @@ class Teacher{
         return $result;
     }
 }
-
-
-
 
 ?>

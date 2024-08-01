@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/estilo_docentes.css">
 </head>
 <body>
+    <!----- Inicio del header ----->
 <header class="header">
         <nav class="nav_container"> 
             <div class="iconos_menu_container"> 
@@ -52,19 +53,22 @@
     </nav>
 </header>
 
+<!----- fin del header ----->
+
+<div class="container_docente"> 
+    <div class="info_docente">
+        <>
+    </div>
+</div>
 
 
-
-
-
-
-
+<!----- inicio del footer ----->
     <footer>
          <div class="links_footer"> 
              <a href=https://www.facebook.com/p/EPET-N%C2%BA3-General-Pico-100067066779103/?_rdr target="_blank"><img src="img/icon_facebook.png" alt="logo_facebook" class="a_icon"></a>
              <a href="https://www.instagram.com/epet3lapampa/" target="_blank"><img src="img/icon_instagram.png" alt="icono instagram" class="a_icon"></a>
             </div>    
         </footer>
-
+<!----- fin del footer ----->
 </body>
 </html>

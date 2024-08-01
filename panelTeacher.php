@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel de Estudiantes</title>
+    <title>Panel de Profesores</title>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/alertify.min.css"/>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/themes/default.min.css"/>
 
@@ -48,12 +48,3 @@
     </table>
 
 </body>
-<script
-  src="https://code.jquery.com/jquery-3.6.4.js"
-  integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
-  crossorigin="anonymous"></script>
-<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/alertify.min.js"></script>
-<script src="js/funciones.js"></script>
-
-
-</html>
