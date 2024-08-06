@@ -1,20 +1,21 @@
 <?php
     include ("database.class.php");
     
-    class activity{
+    class Activity{
         private $idActivity=null;
-        private $idSubject=null;
-        private $name=null;
+        private $name_activity=null;
         private $description=null;
-        private $ruta=null;
-        private $idPlanning=null;
-        private $idCurso=null;
+        private $name_teacher=null;
+        private $name_subject=null;
+        private $ruta_file=null;
+        private $curso=null;
+        private $division=null;
         private $conexion=null;
-    }
+    
 
     public function addActivity(){
         //crear consulta
-        $sql="INSERT INTO activities (dni, surname, name, birthday, phone, address, email, password, school) VALUES (".$this->dni.", '".$this->surname."', '".$this->name."', '".$this->birthday."', '".$this->phone."', '".$this->address."', '".$this->email."', '".$this->password."', '".$this->school."')";
+        $sql="INSERT INTO activities () VALUES ()";
         
         $this->conexion=new Database();
         $result= $this->conexion->query($sql);
@@ -22,5 +23,17 @@
         return $result;
     }
 
+    public function deleteActivity(){
+
+    }
+    public function updateActivity(){
+
+    }
+    public function getActivity(){
+
+    }
+
+
+    }
 
 ?>

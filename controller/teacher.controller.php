@@ -4,8 +4,6 @@ include("../model/teacher.class.php");
 $operacion=$_REQUEST["operation"];
 $teacher= new Teacher(); //creamos el objeto teacher de tipo Teacher
 
-
-
 if($operacion=="add"){
     $teacher->setDni($_REQUEST ["dni"]);
     $teacher->setName($_REQUEST ["name"]);
@@ -36,4 +34,5 @@ if($operacion=="add"){
     $result=$teacher-> deleteTeacher();
     echo $result;
 }
+
 ?>

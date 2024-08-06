@@ -9,39 +9,38 @@
 
 </head>
 <body>
-    <h1>Panel de estudiantes</h1>
+    <h1>Panel de Profesores</h1>
     <table>
         <thead>
             <tr>
-                <th>ID Estudiante</th>
-                <th>Apellido</th>
-                <th>Nombre</th>
-                <th>DNI</th>
-                <th>Fecha Nac.</th>
-                <th>Tel&eacute;fono</th>
+                <th>Apellido:</th>
+                <th>Nombre:</th>
+                <th>DNI:</th>
+                <th>Fecha Nacimiento:</th>
+                <th>Tel&eacute;fono:</th>
                 <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
             <?php
-            include("./model/student.class.php");
-            $student= new Student();
-            $allStudents=$student->getAllStudents();
-            if($allStudents){
-                foreach($allStudents as $data){
+            include("./model/teacher.class.php");
+            $teacher= new Teacher();
+            $allTeachers=$teacher->getAllTeachers();
+            if($allTeachers){
+                foreach($allTeachers as $data){
                     print"<tr>";
-                    print"<td>".$data["idStudent"]."</td>";
+                    print"<td>".$data["idTeacher"]."</td>";
                     print"<td>".$data["surname"]."</td>";
                     print"<td>".$data["name"]."</td>";
                     print"<td>".$data["dni"]."</td>";
                     print"<td>".$data["birthday"]."</td>";
                     print"<td>".$data["phone"]."</td>";
-                    print "<td><input type='button' name='editar' value='Editar' onclick=\"location.href='formEditStudent.php?idStudent=".$data["idStudent"]."';\" /></td>";
-                    print "<td><input type='button' name='eliminar' value='Eliminar' onclick='askDeleteStudent(".$data['idStudent'].");'/></td>";
+                    print "<td><input type='button' name='editar' value='Editar' onclick=\"location.href='formEditTeacher.php?idTeacher=".$data["idTeacher"]."';\" /></td>";
+                    print "<td><input type='button' name='eliminar' value='Eliminar' onclick='askDeleteTeacher(".$data['idTeacher'].");'/></td>";
                     print"</tr>";
                 }
             }else{
-                print"No existe ningun estudiante";
+                print"No existe ningun docente";
             }
             ?>
         </tbody>

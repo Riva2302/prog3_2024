@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Añadir Estudiante</title>
+    <title>Añadir Docente</title>
 </head>
 <body>
     
-    <form method="POST" name="formAddStudent" action="controller/student.controller.php">
+    <form method="POST" name="formAddTeacher" action="controller/teacher.controller.php">
     <input type="hidden" name="operation" value="add"/>
     <label>DNI:</label><input type="text" name="dni"><br> 
     <label>Nombre:</label><input type="text" name="name"><br>

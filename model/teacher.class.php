@@ -1,4 +1,6 @@
 <?php
+include("database.class.php");
+
 class Teacher{
     private $idTeacher=null;
     private $dni=null;
@@ -38,6 +40,9 @@ class Teacher{
       //  $this->conexion->close();
         return $result;
     }
+
+    
+
 }
 
 ?>
