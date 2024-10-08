@@ -16,7 +16,7 @@ class Teacher{
 
     public function addTeacher(){
         //crear consulta
-        $sql="INSERT INTO teachers (dni, surname, name, birthday, phone, address, email, password, school) VALUES (".$this->dni.", '".$this->surname."', '".$this->name."', '".$this->birthday."', '".$this->phone."', '".$this->address."', '".$this->email."', '".$this->password."', '".$this->school."')";
+        $sql="INSERT INTO teachers (teacher_dni, teacher_surname, teacher_name, teacher_birthday, teacher_phone, teacher_address, teacher_email, teacher_password, teacher_school) VALUES (".$this->teacher_dni.", '".$this->teacher_surname."', '".$this->teacher_name."', '".$this->teacher_birthday."', '".$this->teacher_phone."', '".$this->teacher_address."', '".$this->teacher_email."', '".$this->teacher_password."', '".$this->teacher_school."')";
         
         $this->conexion=new Database();
         $result= $this->conexion->query($sql);
@@ -25,7 +25,7 @@ class Teacher{
     }
 
     public function updateTeacher(){
-        $sql="UPDATE teachers SET dni=".$this->dni.", surname='".$this->surname."', name='".$this->name."', birthday='".$this->birthday."', phone='".$this->phone."', address='".$this->address."', email='".$this->email."', password='".$this->password."', school='".$this->school."' WHERE idTeacher=".$this->idTeacher;
+        $sql="UPDATE teachers SET teacher_dni=".$this->teacher_dni.", teacher_surname='".$this->teacher_surname."', teacher_name='".$this->teacher_name."', teacher_birthday='".$this->teacher_birthday."', teacher_phone='".$this->teacher_phone."', teacher_address='".$this->teacher_address."', teacher_email='".$this->teacher_email."', teacher_password='".$this->teacher_password."', teacher_school='".$this->teacher_school."' WHERE idTeacher=".$this->teacher_idTeacher;
         print $sql;
         $this->conexion=new Database();
         $result= $this->conexion->query($sql);
@@ -34,7 +34,7 @@ class Teacher{
     }
     
     public function deleteTeacher(){
-        $sql="DELETE FROM teachers WHERE idTeacher=".$this->idTeacher." ";
+        $sql="DELETE FROM teachers WHERE teacher_idTeacher=".$this->teacher_idTeacher." ";
         $this->conexion=new Database();
         $result= $this->conexion->query($sql);
       //  $this->conexion->close();
