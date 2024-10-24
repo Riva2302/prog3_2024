@@ -29,14 +29,14 @@
             if($allTeachers){
                 foreach($allTeachers as $data){
                     print"<tr>";
-                    print"<td>".$data["idTeacher"]."</td>";
-                    print"<td>".$data["surname"]."</td>";
-                    print"<td>".$data["name"]."</td>";
-                    print"<td>".$data["dni"]."</td>";
-                    print"<td>".$data["birthday"]."</td>";
-                    print"<td>".$data["phone"]."</td>";
-                    print "<td><input type='button' name='editar' value='Editar' onclick=\"location.href='formEditTeacher.php?idTeacher=".$data["idTeacher"]."';\" /></td>";
-                    print "<td><input type='button' name='eliminar' value='Eliminar' onclick='askDeleteTeacher(".$data['idTeacher'].");'/></td>";
+                    print"<td>".$data["id_teacher"]."</td>";
+                    print"<td>".$data["teacher_surname"]."</td>";
+                    print"<td>".$data["teacher_name"]."</td>";
+                    print"<td>".$data["teacher_dni"]."</td>";
+                    print"<td>".$data["teacher_birthday"]."</td>";
+                    print"<td>".$data["teacher_phone"]."</td>";
+                    print "<td><input type='button' name='editar' value='Editar' onclick=\"location.href='formEditTeacher.php?id_teacher=".$data["id_teacher"]."';\" /></td>";
+                    print "<td><input type='button' name='eliminar' value='Eliminar' onclick='askDeleteTeacher(".$data['id_teacher'].");'/></td>";
                     print"</tr>";
                 }
             }else{

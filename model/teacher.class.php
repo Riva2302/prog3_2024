@@ -2,16 +2,16 @@
 include("database.class.php");
 
 class Teacher{
-    private $idTeacher=null;
-    private $dni=null;
-    private $name=null;
-    private $surname=null;
-    private $birthdate=null;
-    private $phone=null;
-    private $address=null;
-    private $email=null;
-    private $password=null;
-    private $school=null;
+    private $id_teacher=null;
+    private $teacher_dni=null;
+    private $teacher_name=null;
+    private $teacher_surname=null;
+    private $teacher_birthdate=null;
+    private $teacher_phone=null;
+    private $teacher_address=null;
+    private $teacher_email=null;
+    private $teacher_password=null;
+    private $teacher_school=null;
     private $conexion=null;
 
     public function addTeacher(){
@@ -34,7 +34,7 @@ class Teacher{
     }
     
     public function deleteTeacher(){
-        $sql="DELETE FROM teachers WHERE teacher_idTeacher=".$this->teacher_idTeacher." ";
+        $sql="DELETE FROM teachers WHERE id_teacher=".$this->id_teacher." ";
         $this->conexion=new Database();
         $result= $this->conexion->query($sql);
       //  $this->conexion->close();

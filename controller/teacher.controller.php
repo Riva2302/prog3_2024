@@ -26,11 +26,11 @@ if($operacion=="add"){
     $teacher->setEmail($_REQUEST ["teacher_email"]);
     $teacher->setPassword($_REQUEST ["teacher_password"]);
     $teacher->setSchool($_REQUEST ["teacher_school"]);
-    $teacher->setIdTeacher($_REQUEST ["teacher_idteacher"]);
+    $teacher->setIdTeacher($_REQUEST ["id_teacher"]);
     $teacher->updateTeacher();
 
 }else if($operacion=="delete"){
-    $teacher->setIdTeacher($_REQUEST ["id"]);
+    $teacher->setIdTeacher($_REQUEST ["id_teacher"]);
     $result=$teacher-> deleteTeacher();
     echo $result;
 }
